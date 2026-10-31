@@ -3,7 +3,7 @@
 # Base class for all application mailer
 # :nocov:
 class ApplicationMailer < ActionMailer::Base
-  default from: ENV['DEVISE_MAILER_FROM']
+  default from: ENV['DEVISE_MAILER_FROM'] || 'test@domain.com'
   layout 'mailer'
 end
 # :nocov:

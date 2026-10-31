@@ -46,6 +46,6 @@ module RailsDeviseGraphql
     config.time_zone = 'Berlin'
 
     # devise uses this for default from options
-    config.action_mailer.default_options = { from: ENV['DEVISE_MAILER_FROM'] }
+    config.action_mailer.default_options = { from: ENV['DEVISE_MAILER_FROM'] || 'test@domain.com' }
   end
 end
