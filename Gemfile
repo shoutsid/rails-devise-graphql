@@ -6,13 +6,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '>= 2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', git: 'https://github.com/rails/rails.git'
-gem 'rails', '6.0.6.1'
+gem "rails", "6.1.7.10"
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem "pg", "~> 1.5.0"
 
 gem 'bcrypt', '~> 3.1.7'                    # Use ActiveModel has_secure_password
-gem "devise", "~> 4.0" # Use devise as authentication module
+gem "devise", "~> 4.0"
 gem 'devise_invitable', '~> 2.0.0'          # Used to invite users. Allows setting passwords by invited user
 gem 'graphql', '~> 1.11.4'                  # GraphQL as API
 gem 'graphql-auth', git: 'https://github.com/simonfranzen/graphql-auth.git', branch: 'rails6'
@@ -20,7 +20,7 @@ gem 'graphql-errors'                        # GrapqhQL error handling
 gem 'search_object_graphql'                 # Search Object for graphql-ruby
 gem 'rack-cors'                             # Rack CORS settings
 gem 'rails_admin', '~> 2.0.2'               # Admin interface
-gem 'cancancan'                             # Defining abilities
+gem 'cancancan', '~> 3.2'                    # Defining abilities
 gem 'image_processing', '~> 1.2'            # Image processing
 gem 'mini_magick'                           # Image manipulation with rmagick
 gem 'friendly_id', '5.3.0'                  # Auto generate slugs for resources
@@ -50,7 +50,7 @@ gem 'puma', '~> 3.12'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", "~> 1.4.9", require: false
+gem "bootsnap", "~> 1.4.9"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -60,17 +60,17 @@ gem "bootsnap", "~> 1.4.9", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'awesome_print'                       # better console ouput for objects -> ap object.inspect
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem "byebug", "~> 11.0"
   gem 'dotenv-rails'                        # craate a .env file to set local environment variables
   gem 'factory_bot_rails'                   # model mocks with factory bot
-  gem "rspec-rails", "~> 4.0.0" # used testframework
+  gem "rspec-rails", "~> 4.0.0"
   gem 'faker', '~> 1.8'
 end
 
 group :test do
   gem "database_cleaner", "~> 1.0"
   gem 'rails-controller-testing'
-  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem "shoulda-matchers", "~> 4.1"
   gem 'simplecov', require: false
   gem 'i18n-spec'
   gem 'timecop'
@@ -99,3 +99,4 @@ gem "globalid", "~> 1.1.0"
 gem "zeitwerk", "~> 2.6.0"
 gem "nokogiri", "~> 1.12.0"
 gem "jquery-ui-rails", "~> 6.0"
+gem "rake", ">= 12.2"
