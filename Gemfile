@@ -3,9 +3,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '>= 2.6.5'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', git: 'https://github.com/rails/rails.git'
 gem 'rails', '~> 6.0.3'
 
 # Use postgresql as the database for Active Record
@@ -50,7 +50,7 @@ gem 'puma', '~> 3.12'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem "bootsnap", "~> 1.4.9", require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -87,3 +87,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+gem "json", "~> 1.8.6"
+gem "mimemagic", "= 0.3.9"
+gem "ffi", "~> 1.16.0"
+gem "bigdecimal", "~> 1.4.2"
+gem "raindrops", "~> 0.20.0"
+gem "kgio", "~> 2.11.0"
